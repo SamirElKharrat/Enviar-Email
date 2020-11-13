@@ -35,6 +35,7 @@ public class EnviarController implements Initializable {
 		loader.load();
 	}
 
+
 	@FXML
 	private BorderPane view;
 
@@ -60,7 +61,7 @@ public class EnviarController implements Initializable {
 	private PasswordField txtPass;
 
 	@FXML
-	private CheckBox checkSSL;
+	private CheckBox checkSLL;
 
 	@FXML
 	private Button btEnviar;
@@ -78,7 +79,7 @@ public class EnviarController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		Bindings.bindBidirectional(model.smtpProperty(), txtSMTP.textProperty());
 		Bindings.bindBidirectional(txtPuerto.textProperty(), model.puertoProperty(), new NumberStringConverter());
-		Bindings.bindBidirectional(model.sslProperty(), checkSSL.selectedProperty());
+		Bindings.bindBidirectional(model.sslProperty(), checkSLL.selectedProperty());
 		Bindings.bindBidirectional(model.remitenteProperty(), txtRemitente.textProperty());
 		Bindings.bindBidirectional(model.contraseñaProperty(), txtPass.textProperty());
 		Bindings.bindBidirectional(model.destinatarioProperty(), txtDestinatario.textProperty());
@@ -106,7 +107,7 @@ public class EnviarController implements Initializable {
 			
 		    alert.setTitle("Enviar Email");
 			alert.setHeaderText("Enviado");
-			alert.setContentText("Email enviado al destinatario");
+			alert.setContentText("Email enviado a: '" + model.getDestinatario() + "'");
 
 			alert.showAndWait();
 
@@ -115,10 +116,12 @@ public class EnviarController implements Initializable {
 			
 		    alert.setTitle("Enviar Email");
 			alert.setHeaderText("Error");
-			alert.setContentText("Email no mandado correctamente");
+			alert.setContentText(e1.getLocalizedMessage());
+
 
 			alert.showAndWait();
 			e1.printStackTrace();
+
 		}
 
 	}
@@ -127,7 +130,7 @@ public class EnviarController implements Initializable {
 	public void OnActionVaciar(ActionEvent v) {
 		model.setSmtp("");
 		model.setPuerto(0);
-		model.isSsl();
+		model.setSsl(false);
 		model.setRemitente("");
 		model.setContraseña("");
 		model.setDestinatario("");

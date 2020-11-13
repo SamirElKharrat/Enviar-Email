@@ -17,6 +17,7 @@ public class EnviarModel {
 	private StringProperty destinatario = new SimpleStringProperty();
 	private StringProperty asunto = new SimpleStringProperty();
 	private StringProperty mensaje = new SimpleStringProperty();
+	
 	public final StringProperty smtpProperty() {
 		return this.smtp;
 	}
@@ -112,8 +113,4 @@ public class EnviarModel {
 	public final void setMensaje(final String mensaje) {
 		this.mensajeProperty().set(mensaje);
 	}
-	
-	
-	
-
 }
