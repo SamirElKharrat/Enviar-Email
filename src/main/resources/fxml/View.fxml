@@ -13,21 +13,22 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <right>
       <VBox alignment="TOP_RIGHT" prefHeight="207.0" prefWidth="56.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btEnviar" alignment="TOP_RIGHT" defaultButton="true" lineSpacing="5.0" mnemonicParsing="false" onAction="#OnActionEnviar" text="Enviar">
+            <Button fx:id="btEnviar" alignment="TOP_RIGHT" defaultButton="true" lineSpacing="5.0" mnemonicParsing="false" text="Enviar">
                <VBox.margin>
                   <Insets right="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btVaciar" lineSpacing="5.0" mnemonicParsing="false" onAction="#OnActionVaciar" text="Vaciar">
+            <Button fx:id="btVaciar" lineSpacing="5.0" mnemonicParsing="false" text="Vaciar">
                <VBox.margin>
                   <Insets right="5.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btCerrar" alignment="TOP_RIGHT" contentDisplay="TOP" lineSpacing="5.0" mnemonicParsing="false" onAction="#OnActionCerrar" text="Cerrar">
+            <Button fx:id="btCerrar" alignment="TOP_RIGHT" contentDisplay="TOP" lineSpacing="5.0" mnemonicParsing="false" text="Cerrar">
                <VBox.margin>
                   <Insets right="5.0" />
                </VBox.margin>
@@ -61,7 +62,7 @@
             <TextField fx:id="txtRemitente" maxHeight="25.0" maxWidth="279.0" minHeight="25.0" minWidth="200.0" prefHeight="25.0" prefWidth="247.0" promptText="Email del remitente" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <PasswordField fx:id="txtPass" alignment="BOTTOM_LEFT" maxWidth="183.0" minHeight="25.0" minWidth="155.0" prefHeight="25.0" prefWidth="155.0" promptText="Contraseña" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <TextField fx:id="txtDestinatario" prefHeight="25.0" prefWidth="331.0" promptText="Email del destinatario" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <TextArea fx:id="txtMensaje" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Mensaje" scrollLeft="10.0" scrollTop="10.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+            <TextArea fx:id="txtMensaje" prefHeight="200.0" prefWidth="200.0" scrollLeft="10.0" scrollTop="10.0" promptText="Mensaje" GridPane.columnSpan="3" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" />
                </GridPane.margin>
