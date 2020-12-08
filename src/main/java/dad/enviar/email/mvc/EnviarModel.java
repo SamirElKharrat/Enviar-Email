@@ -13,7 +13,7 @@ public class EnviarModel {
 	private IntegerProperty puerto = new SimpleIntegerProperty();
 	private BooleanProperty ssl = new SimpleBooleanProperty();
 	private StringProperty remitente = new SimpleStringProperty();
-	private StringProperty contraseña = new SimpleStringProperty();
+	private StringProperty contraseÃ±a = new SimpleStringProperty();
 	private StringProperty destinatario = new SimpleStringProperty();
 	private StringProperty asunto = new SimpleStringProperty();
 	private StringProperty mensaje = new SimpleStringProperty();
@@ -66,16 +66,16 @@ public class EnviarModel {
 		this.remitenteProperty().set(remitente);
 	}
 	
-	public final StringProperty contraseñaProperty() {
-		return this.contraseña;
+	public final StringProperty contraseÃ±aProperty() {
+		return this.contraseÃ±a;
 	}
 	
-	public final String getContraseña() {
-		return this.contraseñaProperty().get();
+	public final String getContraseÃ±a() {
+		return this.contraseÃ±aProperty().get();
 	}
 	
-	public final void setContraseña(final String contraseña) {
-		this.contraseñaProperty().set(contraseña);
+	public final void setContraseÃ±a(final String contraseÃ±a) {
+		this.contraseÃ±aProperty().set(contraseÃ±a);
 	}
 	
 	public final StringProperty destinatarioProperty() {

@@ -81,7 +81,7 @@ public class EnviarController implements Initializable {
 		Bindings.bindBidirectional(txtPuerto.textProperty(), model.puertoProperty(), new NumberStringConverter());
 		Bindings.bindBidirectional(model.sslProperty(), checkSLL.selectedProperty());
 		Bindings.bindBidirectional(model.remitenteProperty(), txtRemitente.textProperty());
-		Bindings.bindBidirectional(model.contraseñaProperty(), txtPass.textProperty());
+		Bindings.bindBidirectional(model.contraseÃ±aProperty(), txtPass.textProperty());
 		Bindings.bindBidirectional(model.destinatarioProperty(), txtDestinatario.textProperty());
 		Bindings.bindBidirectional(model.asuntoProperty(), txtAsunto.textProperty());
 		Bindings.bindBidirectional(model.mensajeProperty(), txtMensaje.textProperty());
@@ -96,7 +96,7 @@ public class EnviarController implements Initializable {
 
 			email.setHostName(model.getSmtp());
 			email.setSmtpPort(model.getPuerto());
-			email.setAuthenticator(new DefaultAuthenticator(model.getRemitente(), model.getContraseña()));
+			email.setAuthenticator(new DefaultAuthenticator(model.getRemitente(), model.getContraseÃ±a()));
 			email.setSSLOnConnect(model.isSsl());
 			email.setFrom(model.getRemitente());
 			email.setSubject(model.getAsunto());
@@ -132,7 +132,7 @@ public class EnviarController implements Initializable {
 		model.setPuerto(0);
 		model.setSsl(false);
 		model.setRemitente("");
-		model.setContraseña("");
+		model.setContraseÃ±a("");
 		model.setDestinatario("");
 		model.setAsunto("");
 		model.setMensaje("");
